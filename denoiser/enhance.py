@@ -79,7 +79,7 @@ def save_wavs(estimates, noisy_sigs, filenames, out_dir, sr=16_000):
 
 def write(wav, filename, sr=16_000):
     # Normalize audio if it prevents clipping
-    wav = wav / max(wav.abs().max().item(), 1)
+    #wav = wav / max(wav.abs().max().item(), dim=1)
     torchaudio.save(filename, wav.cpu(), sr)
 
 
